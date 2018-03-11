@@ -1,0 +1,15 @@
+.gradle
+*.iml
+build
+out
+.DS_store
+.gradle/
+.idea/
+build/
+src/main/resources/
+
+
+#выбираем VCS - LOG выбираем версию до каторй надо откатиться,
+#"reset current brunch to here" либо soft or hard
+#выбираем файл который хотим игнорить, git - revert
+#снова пушиым cntrl + shift +k

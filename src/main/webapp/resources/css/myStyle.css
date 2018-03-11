@@ -1,0 +1,209 @@
+.folder {
+    width: 150px;
+    height: 105px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    background-color: #708090;
+    border-radius: 0 26px 6px 6px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+}
+
+.folder:before {
+    content: '';
+    width: 50%;
+    height: 12px;
+    border-radius: 0 20px 0 0;
+    background-color: #708090;
+    position: absolute;
+    top: -12px;
+    left: 0px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    z-index: 11;
+    top: 35%;
+    right: 50%;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.shade {position: fixed; z-index: 10; top: 0; right: 0; bottom: 0; left: 0; background: #000; opacity: 0.7; filter: alpha(opacity=70);}
+
+.showPic {position: fixed; z-index: 11; top: 5%; right: 8%; bottom: 5%; left: 10%;}
+
+
+
+i {
+
+
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+
+.forSlash {
+
+    font-family: 'LatoRegular',Arial,sans-serif;
+    font-weight: 600;
+    display: inline;
+    font-size: 125%;
+}
+
+
+
+
+.lihgtBorder {
+border: 2px solid #5cc5ff;
+border-top-width: 2px;
+border-right-width: 2px;
+border-bottom-width: 2px;
+border-left-width: 2px;
+border-top-style: solid;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-color: rgb(92, 197, 255);
+border-right-color: rgb(92, 197, 255);
+border-bottom-color: rgb(92, 197, 255);
+border-left-color: rgb(92, 197, 255);
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image-source: none;
+border-image-slice: 100%;
+border-image-width: 1;
+border-image-outset: 0;
+border-image-repeat: stretch stretch;
+}
+.greyBorder {
+    border: 2px solid #404d58;
+}
+
+.treeFolderArr {
+    z-index: 9;
+}
+
+.folderForNavigation {
+    background-image: url(resources/photocloud8/img/cd-icons.svg);
+    width: 16px;
+    height: 16px;
+}
+
+.blockButton{
+    padding: 0 0 0 300px;
+}
+
+a {
+    color: #ffffff; /* Цвет обычной ссылки */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+/* Цвет посещённой ссылки */
+/*
+a:visited {
+    color: #800080;
+}
+*/
+a:hover {
+    color: #59c2ff; /* Цвет ссылки при наведении на нее курсора мыши */
+    text-decoration: underline; /* Добавляем подчеркивание */
+}
+
+.fa.fa-arrow-left.fa-lg:hover {
+    color: #59c2ff ; /* Цвет ссылки при наведении на нее курсора мыши */
+    /* Добавляем подчеркивание */
+}
+.fa.fa-arrow-right.fa-lg:hover {
+    color: #59c2ff ; /* Цвет ссылки при наведении на нее курсора мыши */
+    /* Добавляем подчеркивание */
+}
+
+.scroll{
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+}
+
+.myHover{
+    color: #ffffff;
+    cursor: pointer;
+}
+.myHover:hover{
+    color: #59c2ff ;
+    cursor: pointer;
+}
+
+.photo {
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative; /* Относительное позиционирование */
+}
+.photo:hover::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 10%; top: 100%; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    background: rgba(255,255,230,0.5); /* Полупрозрачный цвет фона */
+    font-family: Arial, sans-serif; /* Гарнитура шрифта */
+    font-size: 14px; /* Размер текста подсказки */
+    padding: 3px 6px; /* Поля */
+    border: 1px solid #333; /* Параметры рамки */
+    border-radius:5px;
+}
+
+.myPic{
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative;
+}
+.myPic:hover::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 20%; top: 110%; /* Положение подсказки */
+    z-index: 101; /* Отображаем подсказку поверх других элементов */
+    background: rgba(255,255,230,0.7); /* Полупрозрачный цвет фона */
+    font-family: Arial, sans-serif; /* Гарнитура шрифта */
+    font-size: 13px; /* Размер текста подсказки */
+    padding: 1px 4px; /* Поля */
+    border: 1px solid #333; /* Параметры рамки */
+    border-radius:4px;
+}
+
+.myContainer {
+    position: fixed;
+    z-index: 9;
+    left: 40%;
+    right: 40%;
+    top: 40px;
+}
+
+
+.fileEd {
+    /*margin: 20px 10px 0 10px;*/
+    width: 100%;
+    max-width: 560px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
